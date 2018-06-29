@@ -1,0 +1,20 @@
+sudo: required
+
+services:
+  docker
+
+script:
+  - chmod +x build
+  - ./build
+
+deploy:
+  provider: firebase
+  on:
+    branch: master  
+  skip-cleanup: true
+  token:
+    secure: "bongT/e4T04oZGDfEFEWnhj8aKGGFirRV0dylJNngxISeRBnBhU/lOtetizuYmmzcroNVDvmCr1ak5ghWsXP5MYLkeZqJmlez96AO4gzuYHKBJqM6WGo6Xa3WyeamoQEnIwg41W+UquyTlHBQzyhds3mrObijjuYPvMpDostqTXEZVI7BibVKS698b2UqEZvqG+QJ/rOuN9OJQgIBjvYo1EokUUDohjzsHT/ilggg6rktd9SYXLPX7y7LDFYP91+Z1s97QCt032VgvH1Klo10gcThWR8NjdxBSGXkaXL/cEUiTNWfO1ZzzOyoJnCSkkB59YPUNRttadd1zbC9Jh8o9ufA/sOltzF+God2zxghGjpQpph5hnIC1mzFJ/Sk1enTlC/dmhrec7XkSde22E536bW0DgTb7RXZDWv3OzjGtSJFC84273CkaxQOUp+iUiV1cOzC/HcpOOxfdPNtLyS2MRCu8XPhWlb2WLov8ipWjg+QFKSXKGqooXnddwRF7qh8nQ6iwIm8xZkDI0ErYXtPE/2wbZcZMVdUVR8HcDIvVgRA6xDvKzHTxX3MJBgKWNHuTGQWY3qZ2mvLvESia0EP1FQ6VRoiD4/reDPbbNKwW+/F6wmz0Djf3EP1n+upM2FB21FuBP7GpGogxWjTzWxVRyVq5cMVIZnitBkMWiUBkg="
+  project: "production"  
+
+
+
