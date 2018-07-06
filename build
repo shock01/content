@@ -3,8 +3,17 @@ set -ev
 
 echo "building static site"
 
+if [ "$#" -ne 2 ]; then
+  echo "Usage: <docker_username> <docker_password>" >&2
+  exit 1
+fi
+
+username=$1
+password=$2
+
 rm -rf public && \
       mkdir public
 
+echo "$password" | docker login -u "$username" --password-stdin
 docker pull shock01/stefhock-hugo
 docker run --rm -v $(pwd)/public:/var/hugo/public -v $(pwd)/content:/var/hugo/content shock01/stefhock-hugo
