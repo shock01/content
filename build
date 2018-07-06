@@ -6,7 +6,5 @@ echo "building static site"
 rm -rf public && \
       mkdir public
 
-echo 
-
 docker pull shock01/stefhock-hugo
 docker run --rm -v $(pwd)/public:/var/hugo/public -v $(pwd)/content:/var/hugo/content shock01/stefhock-hugo
