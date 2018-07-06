@@ -7,7 +7,7 @@ env:
 
 script:
   - chmod +x build 
-  - "./build $DOCKER_USERNAME $DOCKER_PASSWORD"
+  - ./build $DOCKER_USERNAME $DOCKER_PASSWORD
 
 deploy:
   provider: firebase
