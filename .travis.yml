@@ -6,8 +6,8 @@ env:
   - secure: k1UFx+Xn3VLfkShFK+uVxI6oV8iKcdqzwNj0c542qxJlM12KY7v+7wziOb6luBWaMUB56iBKOpmdCxl2l1aCKvQBY59FVMx+96inP49hee4sN3BoOnvlqRLktWFfyGujwqPDCyICipr4N1Jjp5aSdfe7eKJONJBTMTcZUC/PNVZ+2soZgtYpVI9QlLB8RX6plSu9+6QFpXijcVo4RwH4NpnVlDar3FLhqyfoZURN5RwSR/u8Eg0gmLnhevNvrIeJACw0ntAZOCM4jVHuOZbNreaGz79mAS6yOsysR3yMFxp/VKdxqze6eV+z5AFPbRu03U8U/eE7T+ZWb9BIJCbSb0/MsTNMCrzXTHLSV5a/j+//qsmTBNamOy0dUgfN2jVWBtyuqJDeWMZXWGsMifkCdfUB34Zutd3lB4snJH1K9CmpP7pXkJ6O2FCDWRjAORWBQyKNoSobX3aPU7s4dfJM+8zALkBSI1tuzCAMpIvwib1BDLWirGaNgMbG6tt5ILokp1FEJY2aDiZNnS0NcmHkxEKbhZydlCAuuqb7OZ/eeCiCXvdGohY86dC0hEkncYHQCjbgyhGn9TtA9Kw4/CGtq6a5UyNsYwA8Hm+do0uufvYggSLxXbb+GYhjohMnay7sP6mgZAeRMj2KgMyZ++Qmxw3cpQFbJQnRbNMJ2GCMawA=
 
 script:
-  - chmod +x build $DOCKER_USERNAME $DOCKER_PASSWORD
-  - "./build"
+  - chmod +x build 
+  - "./build $DOCKER_USERNAME $DOCKER_PASSWORD"
 
 deploy:
   provider: firebase
